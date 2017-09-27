@@ -1,0 +1,16 @@
+{
+  "env": {
+    "node": true,
+    "mocha": true // useful to avoid error in test javascript
+  },
+   "extends": ["airbnb-base"],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "max-len": [2, {"code": 180, "tabWidth": 4, "ignoreUrls": true}],
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "object-curly-newline": ["error", { "multiline": true, "minProperties": 8 }]
+  }
+}

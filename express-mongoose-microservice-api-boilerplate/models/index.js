@@ -1,0 +1,2 @@
+require('./product')
+require('./category')
