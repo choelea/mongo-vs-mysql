@@ -28,7 +28,7 @@ describe('try to create huge documents into Product', function f() {
   it('should create a 20 product', (done) => {
     co(function* test() {
       for (let i = 0; i < 20; i++) {
-        const product = new Product({ code: `pp-${i}`, name: 'ihpone', price: 19, categories: targetCates })
+        const product = new Product({ code: `pp-${i}`, name: 'iphone', price: 19, categories: targetCates })
         yield product.save()
       }
       done()
