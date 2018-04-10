@@ -2,7 +2,6 @@ package com.example.datademo.domain;
 
 import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -30,8 +29,7 @@ public class Product {
     
     private Long price;
     
-//    @ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER) // This will cause issue when save product and with categories
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "product_category", joinColumns = { @JoinColumn(name = "productId", referencedColumnName = "id") }, inverseJoinColumns = {
 			@JoinColumn(name = "categoryId", referencedColumnName = "id") })    
     private Set<Category> categories;
